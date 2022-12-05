@@ -10,6 +10,7 @@ const cors = require("cors");
 const config = require("./utils/config");
 const logger = require("./utils/logger");
 
+//controllers
 const projectRouter = require("./controllers/projectController")
 
 //mongoose
@@ -31,6 +32,7 @@ app.use(cors());
 //transform all incoming request body into javascript object
 app.use(express.json());
 
+//use controllers
 app.use("/projects", projectRouter);
 
 //exports

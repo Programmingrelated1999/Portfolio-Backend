@@ -53,8 +53,8 @@ projectRouter.put("/:id", async (request, response) => {
 projectRouter.delete("/:id", async (request, response) => {
     let projectToDelete = await Projects.findById(request.params.id);
 
-    const deletedProject = await project.remove();
-    response.json(savedProject);
+    const deletedProject = await projectToDelete.remove();
+    response.json(deletedProject);
 });
 
 module.exports = projectRouter;
