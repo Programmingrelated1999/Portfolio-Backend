@@ -16,6 +16,7 @@ const projectSchema = new mongoose.Schema({
     image: {
       type: String,
       required: true,
+      default: "../public/data/uploads/project-tracker1.png"
     },
     purpose:{
         type: String,

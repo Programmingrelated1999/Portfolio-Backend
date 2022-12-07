@@ -3,6 +3,10 @@
 const express = require("express");
 const app = express();
 
+//multer
+const multer  = require('multer')
+const upload = multer({ dest: './public/data/uploads/' })
+
 //cross-origin resource sharing import
 const cors = require("cors");
 

@@ -24,7 +24,7 @@ projectRouter.post("/", async (request, response) => {
         {
             name: request.body.name,
             description: request.body.description,
-            image: request.body.image,
+            //image: request.body.image,
             purpose: request.body.purpose,
             live: request.body.live,
             github: request.body.github
