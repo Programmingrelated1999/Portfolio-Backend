@@ -36,6 +36,9 @@ app.use(cors());
 //transform all incoming request body into javascript object
 app.use(express.json());
 
+app.use(express.static('public')); 
+app.use('/images', express.static('images'));
+
 //use controllers
 app.use("/projects", projectRouter);
 
