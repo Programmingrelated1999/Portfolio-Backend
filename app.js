@@ -3,9 +3,11 @@
 const express = require("express");
 const app = express();
 
+const path = require('path');
+
 //multer
 const multer  = require('multer')
-const upload = multer({ dest: './public/data/uploads/' })
+const upload = multer({ dest: './public' })
 
 //cross-origin resource sharing import
 const cors = require("cors");
@@ -37,7 +39,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use(express.static('public')); 
-app.use('/images', express.static('images'));
+app.use('/images', express.static('public'));;
 
 //use controllers
 app.use("/projects", projectRouter);

@@ -45,7 +45,7 @@ projectRouter.put("/:id", async (request, response) => {
     projectToUpdate.live = request.body.live? request.body.live: projectToUpdate.live;
     projectToUpdate.github = request.body.github? request.body.github: projectToUpdate.github;
 
-    const savedProject = await project.save();
+    const savedProject = await projectToUpdate.save();
     response.json(savedProject);
 });
 
